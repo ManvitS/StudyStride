@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    p{
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+:root {
+    --bg-color: #faf8f5;
+    --text-color: #1a1918;
+    --border-line-color: #dcd6cd;
+    --input-bg: #ffffff;
+    --input-text: #1a1918;
+    --placeholder-color: #8c857b;
+    --progress-track: #e9e4dc;
+    --progress-fill-color: #c5a059;
+    --badge-purple: #f3efe6;
+    --badge-green: #eaf0eb;
+    --badge-blue: #e8eef2;
+    --btn-bg: #2b2927;
+    --btn-color: #f5f2eb;
+    --btn-hover: #423e3b;
+}
+
+/* --divider-- */
+hr {
+    border: none;
+    border-top: 2px solid var(--border-line-color);
+    margin: 10px 0;
+}
+
+/* --top navigation bar-- */
+body.dark-mode {
+    --bg-color: #0b0d12;
+    --text-color: #ffffff;
+    --border-line-color: #272d3b;
+    --input-bg: #151a23;
+    --input-text: #ffffff;
+    --placeholder-color: #94a3b8;
+    --progress-track: #1e2430;
+    --progress-fill-color: #d4af37;
+    --badge-purple: #3b2865;
+    --badge-green: #164e3f;
+    --badge-blue: #1c3d5a;
+    --btn-bg: #d4af37;
+    --btn-color: #0b0d12;
+    --btn-hover: #e6c34f;
+    button {
+        background-color: #161b26;
+        color: #ffffff;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 16px;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.div {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;  
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+.header p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+
+.book-logo {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    border-radius: 50%;
+}
+#mode{
+    border-radius: 50%;
+}
+
+.toggle-mode {
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.top-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border: 2px solid var(--border-line-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+
+
+
+/*-- section of stats --*/
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 1px;
+}
+
+.stat-card{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-line-color);
+    border-radius: 10px;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    margin: 10px;
+    overflow: hidden;
+}
+.stat-icon.purple { background: var(--badge-purple); border-radius: 20%;}
+.stat-icon.green { background: var(--badge-green); border-radius: 20%;}
+.stat-icon.blue { background: var(--badge-blue); border-radius: 20%;}
+
+.stat-info{
+    margin: 1px;
+    padding: 4px;
+}
+
+
+
+/* progress box */
+.progress-box {
+    padding: 20px;
+    border: 2px solid var(--border-line-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    
+}
+
+.progress-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: var(--progress-track);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 20px;
+    width: 0%;
+    background: var(--progress-fill-color);
+    border-radius: 99px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* --main dashboard section-- */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+
+}
+
+label{
+    font-size: 1rem;
+    margin-top: 5px;
+    display: block;
+}
+
+input::placeholder , select, select option{
+    color: var(--placeholder-color);
+    opacity: 0.8;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1px;
+    border: 1px solid var(--border-line-color);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-radius: 5px;
+}
+
+.task-button { 
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.task-button:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+}
+
+.task-button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+/* --task list items-- */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    margin-top: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-line-color);
+    border-radius: 8px;
+}
+
+.task-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-item-left input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.task-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.task-delete-btn:hover {
+    opacity: 1;
+}
+
+main section {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-line-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+

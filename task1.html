@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studycounter</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- navigation bar -->
+        <header class="top-navbar">
+            <div class="container">
+                <div class="header">
+                    <div class="book-logo">📚</div>
+                    <div class="header-text">
+                        <h1>StudyCounter</h1>
+                        <p>Plan it. Master it. Crack it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-navbar">
+                <span id="date">--</span>
+                <button id="mode">
+                    <span id="mode-icon" class="toggle-mode">🌙</span>
+                </button>
+            </div>
+        </header>
+        <hr class="divider">
+
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon purple">📋</span>
+                <div class="stat-info">
+                    <span id="total-count">0</span>
+                    <span>Total tasks</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon green">✅</span>
+                <div class="stat-info">
+                    <span id="completed-count">0</span>
+                    <span>Completed tasks</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon blue">⏳</span>
+                <div class="stat-info">
+                    <span id="pending-count">0</span>
+                    <span>Pending</span>
+                </div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <section class="progress-box">
+            <div class="progress-text">
+                <span class="progress-text">🏆Academic Progress</span>
+                <span id="progress-percent">No tasks yet</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <!-- task section -->
+        <main class="taks-section">
+            <section class="add-task-section">
+                <span><h2>Add task</h2></span>
+                <form id="task-form">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" placeholder="Task Name" required>
+                    <label for="task-subject">Subject:</label>
+                    <input type="text" id="task-subject" placeholder="Subject (eg. Math,DS)" required>
+                    <label for="task-priority">Priority:</label>
+                    <select id="task-priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <label for="task-date">Due Date:</label>
+                    <input type="date" id="task-date">
+                    <button type="submit" id="add-btn" class="task-button">+ Add Task</button>
+                </form>
+            </section>
+
+            <section class="task-list-section">
+                <div class="task-list-header">
+                    <h2>Task List</h2>
+                    <button id="clear-btn" class="task-button">Clear All</button>
+                </div>
+            </section>
+        </main>
+
+        <script src="task1.js"></script>
+    </div>
+</body>
+
+</html>>
